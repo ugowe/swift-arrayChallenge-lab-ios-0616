@@ -1,27 +1,22 @@
-//
-//  ViewController.swift
-//  ArrayChallenge
-//
-//  Created by James Campagno on 6/10/16.
-//  Copyright © 2016 Flatiron School. All rights reserved.
-//
+//: Playground - noun: a place where people can play
 
 import UIKit
 
-class ViewController: UIViewController {
+var str = "Hello, playground"
+
+
+
+
     
     var shoppingList: [String] = []
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+
         
-        let itemQuantities: [Int] = [6, 4, 12, 4]
-        let itemsNeeded: [String] = ["Bananas", "Apples", "Eggs", "Rolls"]
-//        makeShoppingList( quantityOfItems:)
-        shoppingList = makeShoppingList(itemsNeeded, quantityOfItems: itemQuantities)
+        let numberOfItems: [Int] = [6, 4, 12, 4]
+        let storeItems: [String] = ["Bananas", "Apples", "Eggs", "Rolls"]
+        print(makeShoppingList(storeItems, quantityOfItems: numberOfItems))
         
-        print(shoppingList)
-    }
+
     
     func makeShoppingList(items:[String], quantityOfItems: [Int]) -> [String] {
         
@@ -30,7 +25,7 @@ class ViewController: UIViewController {
         var numberAndItem: String = ""
         
         
-        for i in 0..<items.count {
+        for (i) in 0..<items.count {
             let item = items[i]
             let quantity = quantityOfItems[i]
             
@@ -46,4 +41,3 @@ class ViewController: UIViewController {
     }
     
     
-}
